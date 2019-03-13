@@ -7,7 +7,7 @@ public class factorial{
 
 	public static void main(String[] args)
 	{
-		System.out.println("The result is "+factorial(10));
+		System.out.println("The result is "+factorial(0));
 	}
 
 }
