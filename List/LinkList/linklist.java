@@ -1,6 +1,6 @@
 public class linklist{
 
-	private LNode head=new LNode('H',null);
+	private LNode head;
 
 	class LNode{
 		private char data;
@@ -19,8 +19,20 @@ public class linklist{
 
 	}
 
-	public linklist(String str){
+	public void headInsert(String str)
+	{
+		head=new LNode('H',null);
+		char[] chars=str.toCharArray();
+		for(char c:chars)
+		{
+			LNode s=new LNode(c,head.getNext());
+			head.setNext(s);
+		}
+	}
+
+	public void rearInsert(String str){
 	
+		head=new LNode('H',null);
 		char[] chars=str.toCharArray();
 		LNode rear=head;
 		for (char c:chars) {
@@ -38,12 +50,16 @@ public class linklist{
 			System.out.print(rear.getData()+"\t");
 			rear=rear.getNext();
 		}
+		System.out.println();
 	}
 
 	public static void main(String[] args)
 	{
 
-		linklist demo=new linklist("123456789");
+		linklist demo=new linklist();
+		demo.headInsert("123456789");
+		demo.printResult();
+		demo.rearInsert("123456789");
 		demo.printResult();
 	}
 
