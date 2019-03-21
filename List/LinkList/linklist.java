@@ -22,9 +22,11 @@ public class linklist{
 	public linklist(String str){
 	
 		char[] chars=str.toCharArray();
+		LNode rear=head;
 		for (char c:chars) {
-			LNode s=new LNode(c,head.getNext());
-			head.setNext(s);
+			LNode s=new LNode(c,rear.getNext());
+			rear.setNext(s);
+			rear=s;
 		}
 	}
 
