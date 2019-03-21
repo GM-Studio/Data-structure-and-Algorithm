@@ -57,9 +57,9 @@ public class linklist{
 	{
 
 		linklist demo=new linklist();
-		demo.headInsert("123456789");
+		demo.headInsert("12345678910");
 		demo.printResult();
-		demo.rearInsert("123456789");
+		demo.rearInsert("12345678910");
 		demo.printResult();
 	}
 
