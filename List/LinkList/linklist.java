@@ -62,7 +62,4 @@ public class linklist{
 		demo.rearInsert("12345678910");
 		demo.printResult();
 	}
-
-
-
 }
